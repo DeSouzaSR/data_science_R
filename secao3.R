@@ -53,3 +53,9 @@ ggplot(gapminder_1952, aes(x = pop, y = lifeExp)) +
   scale_x_log10() + 
   facet_wrap(~continent)
 
+# renda percapta por expectativa de vida, dividida por ano
+ggplot(gapminder, aes(x = gdpPercap, y = lifeExp, colour = continent, size = pop)) +
+  geom_point() + 
+  scale_x_log10() + 
+  facet_wrap(~year)
+
